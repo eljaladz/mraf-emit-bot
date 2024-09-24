@@ -64,7 +64,7 @@ This project is for educational purposes only. Use at your own risk. The authors
 7. In the **Response** or **Preview** tab, find the `token` and copy the value(started with `eyJ`).
 8. Paste the copied value into `tokens.json` file.
 
-> ***How to get your Token Video Version*** \
+> ***How to get your Token (Video Version)*** \
 > [Click here to play the video](https://github.com/user-attachments/assets/9cf113aa-a135-4053-9af3-d5601be51173)
 
 
