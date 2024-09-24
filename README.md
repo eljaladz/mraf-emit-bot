@@ -64,8 +64,10 @@ This project is for educational purposes only. Use at your own risk. The authors
 7. In the **Response** or **Preview** tab, find the `token` and copy the value(started with `eyJ`).
 8. Paste the copied value into `tokens.json` file.
 
-> Video Version \
-> https://github.com/user-attachments/assets/a08cfeb6-13bf-4878-94bc-29c247a7bbaa
+> How to get your Token Video Version \
+> [using Kiwi Browser on Android 13](https://github.com/user-attachments/assets/9cf113aa-a135-4053-9af3-d5601be51173)
+
+
 
 ## Running the Bot
 
