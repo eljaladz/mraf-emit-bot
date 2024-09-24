@@ -64,7 +64,7 @@ This project is for educational purposes only. Use at your own risk. The authors
 7. In the **Response** or **Preview** tab, find the `token` and copy the value(started with `eyJ`).
 8. Paste the copied value into `tokens.json` file.
 
-> Video Version
+> Video Version \
 > https://github.com/user-attachments/assets/a08cfeb6-13bf-4878-94bc-29c247a7bbaa
 
 ## Running the Bot
