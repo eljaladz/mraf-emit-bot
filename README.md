@@ -65,7 +65,7 @@ This project is for educational purposes only. Use at your own risk. The authors
 8. Paste the copied value into `tokens.json` file.
 
 > ***How to get your Token Video Version*** \
-> [using Kiwi Browser on Android 13](https://github.com/user-attachments/assets/9cf113aa-a135-4053-9af3-d5601be51173)
+> [Click here to play the video](https://github.com/user-attachments/assets/9cf113aa-a135-4053-9af3-d5601be51173)
 
 
 
