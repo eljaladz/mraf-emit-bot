@@ -65,8 +65,8 @@ async function loopMode(TOKENS) {
     console.log(`Current time: ${currentTime.toLocaleTimeString('en-GB')}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
     console.log('')
-    finishFarm(TOKENS);
-    startFarm(TOKENS);
+    await finishFarm(TOKENS);
+    await startFarm(TOKENS);
     await delay(500);
     console.log("Completed! ✓".green);
     await randomDelay(1, 300);
@@ -79,8 +79,8 @@ async function loopMode(TOKENS) {
     console.log(`Current time: ${currentTime.toLocaleTimeString('en-GB')}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
     console.log('')
-    refReward(TOKENS);
-    upClock(TOKENS);
+    await refReward(TOKENS);
+    await upClock(TOKENS);
     await delay(500);
     console.log("Completed! ✓".green);
   });
@@ -92,7 +92,7 @@ async function loopMode(TOKENS) {
     console.log(`Current time: ${currentTime.toLocaleTimeString('en-GB')}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
     console.log('')
-    fetchStartTasks(TOKEN);
+    await fetchStartTasks(TOKEN);
     await delay(500);
     console.log("Completed! ✓".green);
   });
