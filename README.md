@@ -1,5 +1,5 @@
 # mraF emiT Airdrop Bot
----
+⏳⏳⏳
 ## Disclaimer
 
 This project is for educational purposes only. Use at your own risk. The authors are not responsible for any consequences resulting from the use of this software.
