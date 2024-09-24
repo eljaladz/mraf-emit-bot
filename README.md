@@ -8,7 +8,7 @@ This project is for educational purposes only. Use at your own risk. The authors
 
 | Features                                  |   Status  |
 | ----------------------------------------- | :-------: |
-| Claiming daily reward                     |    ❌     |
+| Claiming daily reward                     |    ❓     |
 | Claiming farming reward                   |    ✅     |
 | Claiming referral reward                  |    ✅     |
 | Claiming tasks reward                     |    ✅     |
