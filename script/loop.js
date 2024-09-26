@@ -60,6 +60,7 @@ async function loopMode(TOKENS) {
     await delay(500);
     console.log(`Refreshing data, please wait...`.yellow);
     console.log("");
+    const currentTime = new Date();
     console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
     console.log("");
@@ -75,6 +76,7 @@ async function loopMode(TOKENS) {
     await delay(500);
     console.log(`Refreshing data, please wait...`.yellow);
     console.log("");
+    const currentTime = new Date();
     console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
     console.log("");
@@ -90,6 +92,7 @@ async function loopMode(TOKENS) {
     await delay(500);
     console.log(`Refreshing data, please wait...`.yellow);
     console.log("");
+    const currentTime = new Date();
     console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
     console.log("");
