@@ -1,12 +1,8 @@
 const cron = require("node-cron");
 const { levelInfo } = require("../utils/levels");
-const {
-  getFarmInfo,
-  getRefInfo,
-} = require("../utils/api");
+const { getFarmInfo, getRefInfo } = require("../utils/api");
 const {
   showHead,
-  randomDelay,
   delay,
   finishFarm,
   startFarm,
@@ -22,13 +18,13 @@ async function loopMode(TOKENS) {
   await delay(500);
   console.log("Running Loop Mode...".yellow);
   await delay(500);
-  
+
   const currentTime = new Date();
   console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}\n`);
-  
+
   const list = await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
   console.log(list);
-  console.log('');
+  console.log("");
   await delay(500);
 
   console.log("Running all functions before scheduling starts...\n".yellow);
@@ -54,31 +50,34 @@ async function loopMode(TOKENS) {
     process.stdout.write("\x1Bc");
     await showHead();
     const currentTime = new Date();
-    console.log(`Current time: ${currentTime.toLocaleTimeString('en-GB')}`);
+    console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}`);
     console.log(`Loop Mode is still running. Please be patient!\n`.yellow);
   });
 
   cron.schedule("5 0,4,8,12,16 * * *", async () => {
-    await randomDelay(1, 300);
+    process.stdout.write("\x1Bc");
+    await showHead();
+    await delay(500);
     console.log(`Refreshing data, please wait...`.yellow);
-    console.log('')
-    console.log(`Current time: ${currentTime.toLocaleTimeString('en-GB')}`);
+    console.log("");
+    console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
-    console.log('')
+    console.log("");
     await finishFarm(TOKENS);
     await startFarm(TOKENS);
     await delay(500);
     console.log("Completed! ✓".green);
-    await randomDelay(1, 300);
   });
 
   cron.schedule("30 0 * * *", async () => {
-    await randomDelay(1, 300);
+    process.stdout.write("\x1Bc");
+    await showHead();
+    await delay(500);
     console.log(`Refreshing data, please wait...`.yellow);
-    console.log('')
-    console.log(`Current time: ${currentTime.toLocaleTimeString('en-GB')}`);
+    console.log("");
+    console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
-    console.log('')
+    console.log("");
     await refReward(TOKENS);
     await upClock(TOKENS);
     await delay(500);
@@ -86,12 +85,14 @@ async function loopMode(TOKENS) {
   });
 
   cron.schedule("0 1 * * *", async () => {
-    await randomDelay(1, 300);
+    process.stdout.write("\x1Bc");
+    await showHead();
+    await delay(500);
     console.log(`Refreshing data, please wait...`.yellow);
-    console.log('')
-    console.log(`Current time: ${currentTime.toLocaleTimeString('en-GB')}`);
+    console.log("");
+    console.log(`Current time: ${currentTime.toLocaleTimeString("en-GB")}`);
     await userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo);
-    console.log('')
+    console.log("");
     await fetchStartTasks(TOKEN);
     await delay(500);
     console.log("Completed! ✓".green);
