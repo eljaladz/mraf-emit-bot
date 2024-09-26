@@ -14,8 +14,8 @@ const List = require("cli-table3");
 const moment = require("moment");
 
 async function botHead() {
-    process.stdout.write("\x1Bc");
-    const bot = `
+  process.stdout.write("\x1Bc");
+  const bot = `
  _____________________________________________________ 
 |                      _____                  _ _____ |
 |  _ __ ___  _ __ __ _|  ___|   ___ _ __ ___ (_)_   _||
@@ -24,8 +24,8 @@ async function botHead() {
 | |_| |_| |_|_|   __,_|_|       ___|_| |_| |_|_| |_|  |
 |_____________________________________________________|
     `;
-    console.log(bot);
-    console.log('');
+  console.log(bot);
+  console.log("");
 }
 
 async function showHead() {
@@ -97,6 +97,7 @@ async function userInfo(TOKENS, getFarmInfo, getRefInfo, levelInfo) {
 
 async function refReward(TOKENS) {
   for (const [index, TOKEN] of TOKENS.entries()) {
+    await randomDelay(1, 60); // Delay between 1 and 60 seconds
     console.log("Checking referral reward...".gray);
     await delay(1000);
     console.log(`Account ${index + 1}:`);
@@ -124,6 +125,8 @@ async function refReward(TOKENS) {
 
 async function finishFarm(TOKENS) {
   for (const [index, TOKEN] of TOKENS.entries()) {
+    await randomDelay(1, 60); // Delay between 1 and 60 seconds
+
     console.log(`Account ${index + 1}:`);
     console.log("Claiming farming reward...".gray);
     await delay(1000);
@@ -141,6 +144,8 @@ async function finishFarm(TOKENS) {
 
 async function startFarm(TOKENS) {
   for (const [index, TOKEN] of TOKENS.entries()) {
+    await randomDelay(1, 60); // Delay between 1 and 60 seconds
+
     console.log(`Account ${index + 1}:`);
     console.log("Starting farming session...".gray);
     await delay(1000);
@@ -177,6 +182,8 @@ async function startFarm(TOKENS) {
 
 async function fetchStartTasks(TOKENS) {
   for (const [index, TOKEN] of TOKENS.entries()) {
+    await randomDelay(1, 60); // Delay between 1 and 60 seconds
+
     console.log("Getting available task information...".gray);
     await delay(1000);
     console.log(`Account ${index + 1}:`);
@@ -256,6 +263,8 @@ async function fetchStartTasks(TOKENS) {
 
 async function upClock(TOKENS) {
   for (const [index, TOKEN] of TOKENS.entries()) {
+    await randomDelay(1, 60); // Delay between 1 and 60 seconds
+
     console.log("Upgrading clock level...".gray);
     await delay(1000);
     console.log(`Account ${index + 1}:`);
@@ -290,9 +299,8 @@ async function upClock(TOKENS) {
 }
 
 module.exports = {
-    botHead,
+  botHead,
   showHead,
-  randomDelay,
   delay,
   userInfo,
   finishFarm,
